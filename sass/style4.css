@@ -1,0 +1,533 @@
+@import url(../font/transfonter.org-20220325-044310/stylesheet.css);
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.line {
+  display: none;
+}
+
+#topad {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 1em;
+}
+#topad .core {
+  margin-left: 1.5em;
+}
+#topad .core span {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.5em;
+}
+#topad .core span:nth-child(2) {
+  color: whitesmoke;
+  font-size: 2.2em;
+}
+#topad .core span:nth-child(3) {
+  color: #ffff00;
+}
+#topad .burgerMenu {
+  z-index: 99999;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  margin-right: 2em;
+}
+#topad .burgerMenu ul {
+  display: block;
+}
+#topad .burgerMenu ul li {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  list-style: none;
+  width: 2.5em;
+  height: 5px;
+  margin: 6px 0px;
+  background-color: #36454f;
+  border-radius: 10px;
+}
+#topad .burgerMenu .close li {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+#topad .burgerMenu .close li:nth-child(1) {
+  width: 1.5em;
+}
+#topad .burgerMenu .close li:nth-child(3) {
+  width: 1.5em;
+}
+
+.show {
+  width: 80%;
+}
+
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 2em 0;
+  width: 0%;
+  height: 100vh;
+  background-color: #36454f;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  overflow-x: hidden;
+  z-index: 999;
+  color: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+nav .links {
+  height: 70%;
+}
+nav .links .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+nav .links .logo span {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2em;
+  color: #000105;
+}
+nav .links .logo span:nth-child(2) {
+  color: whitesmoke;
+  font-size: 4em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+nav .links .logo span:nth-child(3) {
+  color: #f3f300f8;
+  font-size: 2.2em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+nav .links .fade {
+  width: 0%;
+}
+nav .links ul {
+  margin-top: 2em;
+  text-align: left;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+nav .links ul .active {
+  background-color: rgba(58, 57, 57, 0.829);
+}
+nav .links ul li {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2em 0;
+  list-style: none;
+}
+nav .links ul li:nth-child(1) {
+  border-top: 1px solid rgba(245, 245, 245, 0.11);
+}
+nav .links ul li:not(:last-child) {
+  border-bottom: 1px solid rgba(245, 245, 245, 0.11);
+}
+nav .links ul li img {
+  width: 2em;
+  margin: 0em 1.5em;
+}
+nav .links ul li a {
+  text-decoration: none;
+  font-size: 17px;
+  font-family: monospace;
+  text-transform: uppercase;
+  color: whitesmoke;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+nav .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 20%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow-x: hidden;
+  padding-top: 3em;
+}
+nav .socials a {
+  text-decoration: none;
+  overflow: hidden;
+  border: 2px solid white;
+  border-radius: 50%;
+  height: 3em;
+  width: 3em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+nav .socials a:not(:last-child) {
+  margin-right: 1.5em;
+}
+nav .socials a img {
+  width: 1.5em;
+}
+
+.contact {
+  width: 85%;
+  margin: 0 auto;
+  padding-top: 5em;
+  padding-bottom: 2em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.contact h1 {
+  font-size: 26px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-weight: 400;
+}
+.contact .contact-box {
+  display: grid;
+}
+.contact .contact-box .box {
+  margin: 2em 0;
+}
+.contact .contact-box .box h2 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 1em;
+}
+.contact .contact-box .box li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1em;
+}
+.contact .contact-box .box li p {
+  margin-left: 1em;
+}
+.contact .contact-box .box li .image {
+  border: 2px solid #fafa18;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contact .contact-box .box li .image img {
+  height: 1.8em;
+  width: 1.8em;
+  padding: 0.4em;
+}
+.contact .contact-box .box li h2 {
+  font-size: 11px;
+}
+
+.feed {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fafa18;
+}
+.feed .container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1em 0;
+  text-align: center;
+}
+.feed .container h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 0.5em;
+}
+.feed .container .params {
+  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(1, 2fr);
+  grid-gap: 0.5em;
+  margin-bottom: 1em;
+}
+.feed .container .params input {
+  padding: 0.8em 0;
+  padding-left: 0.5em;
+  border: none;
+  outline: transparent;
+  margin-bottom: 0.5em;
+}
+.feed .container .textarea {
+  width: 100%;
+  border: none;
+  outline: transparent;
+  padding: 1em 0 10em 0em;
+  margin-bottom: 1em;
+}
+.feed .container button {
+  padding: 0.8em 1.5em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  border: none;
+  outline: transparent;
+  background-color: grey;
+}
+
+.track {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 1em;
+  padding-top: 5em;
+}
+.track .title {
+  text-align: center;
+  margin-bottom: 2em;
+}
+.track .title img {
+  width: 3em;
+}
+.track .title li {
+  list-style: none;
+}
+.track .title li h1 {
+  font-size: 19px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: grey;
+}
+.track .title li h1 span {
+  color: #fafa18;
+}
+.track .title li h1 span:nth-child(2) {
+  color: black;
+}
+.track .tracking {
+  background-color: #fafa18;
+  padding: 2em 2em;
+  line-height: 2.5em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.track .tracking h1 {
+  font-size: 25px;
+  font-weight: 400;
+}
+.track .tracking input {
+  padding: 0.6em;
+  width: 60%;
+  outline: transparent;
+  border: none;
+}
+.track .tracking button {
+  padding: 0.8em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: white;
+  background-color: grey;
+  border: none;
+  outline: transparent;
+  cursor: pointer;
+  font-weight: 600;
+}
+.track .package-info {
+  margin: 3em 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 3em;
+}
+.track .package-info label {
+  font-weight: 600;
+}
+.track .package-info #line {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(128, 128, 128, 0.103);
+  margin: 4px 0;
+}
+.track .package-info .number p {
+  color: #dddd7c;
+}
+.track .package-info .location {
+  display: grid;
+  width: 100%;
+}
+.track .package-info .location .travels {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  grid-row-gap: 1.5em;
+}
+.track .package-info .location .travels .moves {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  opacity: 0.3;
+  position: relative;
+}
+.track .package-info .location .travels .moves:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  width: 1.5em;
+  height: 1.5em;
+  background-image: url(../img/next.png);
+  background-position: center;
+  background-size: cover;
+  right: 0%;
+  bottom: 45%;
+}
+.track .package-info .location .travels .moves img {
+  width: 3em;
+}
+.track .package-info .location .travels .moves p {
+  font-weight: 600;
+  font-size: 12px;
+  color: black;
+}
+.track .package-info .date p {
+  color: #dddd7c;
+}
+.track .general-info {
+  padding-bottom: 2em;
+}
+.track .general-info h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+.track .general-info h1 .trackId {
+  margin-left: 0.5em;
+}
+.track .general-info .listing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.track .general-info .listing .head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-bottom: 1em;
+  position: relative;
+}
+.track .general-info .listing .head::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1.5em;
+  background-color: #cacaca;
+  z-index: -1;
+  border-radius: 2px;
+}
+.track .general-info .listing .head h2 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 600;
+  width: 95%;
+  margin: 0 auto;
+}
+.track .general-info .listing .listContent li {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+}
+.track .general-info .listing .listContent p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 11px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 400;
+  margin-bottom: 1.5em;
+}
+
+footer {
+  padding: 1.5em 0;
+  background-color: #050e16;
+}
+footer p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 17px;
+  color: white;
+  text-align: center;
+}/*# sourceMappingURL=style4.css.map */
